@@ -17,4 +17,14 @@ def guardar_dado(dados_rolados, dados_no_estoque, dado_para_guardar):
     resultado.append(dados_no_estoque)
     return resultado
 
+def remover_dado(dados_rolados, dados_no_estoque, dado_para_remover):
+    resultado = []
+    teste = []
+    for i in range(len(dados_no_estoque)):
+        if i != dado_para_remover:
+            teste.append(dados_no_estoque[i])
+    dados_rolados.append(dados_no_estoque[dado_para_remover])
+    resultado.append(dados_rolados)
+    resultado.append(teste)
+    return resultado
 
