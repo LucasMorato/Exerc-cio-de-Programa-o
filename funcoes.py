@@ -173,3 +173,28 @@ def calcula_pontos_quadra(lista_faces):
         return total
     
     return 0
+
+def calcula_pontos_quina(lista_faces):
+    pontos = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
+    tem_quinta = False
+    for elemento in lista_faces:
+        if elemento==1:
+            pontos[1] += 1
+        elif elemento==2:
+            pontos[2] += 1
+        elif elemento==3:
+            pontos[3] += 1
+        elif elemento==4:
+            pontos[4] += 1
+        elif elemento==5:
+            pontos[5] += 1
+        elif elemento==6:
+            pontos[6] += 1
+    for numero in pontos.values():
+        if numero == 5:
+            tem_quinta = True
+            break
+    if tem_quinta:
+        return 50
+    else:
+        return 0
