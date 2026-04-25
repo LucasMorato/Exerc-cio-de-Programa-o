@@ -191,7 +191,7 @@ def calcula_pontos_quina(lista_faces):
         elif elemento==6:
             pontos[6] += 1
     for numero in pontos.values():
-        if numero == 5:
+        if numero >= 5:
             tem_quinta = True
             break
     if tem_quinta:
