@@ -91,9 +91,9 @@ def calcula_pontos_sequencia_alta(lista_faces):
         elif elemento==6:
             pontos[6] += 1
     if pontos[1] >= 1 and pontos[2] >= 1 and pontos[3] >= 1 and pontos[4] >= 1 and pontos[5] >= 1:
-        return 20
+        return 30
     elif pontos[2] >= 1 and pontos[3] >= 1 and pontos[4] >= 1 and pontos[5] >= 1 and pontos[6] >= 1:
-        return 20
+        return 30
     else:
         return 0
             
