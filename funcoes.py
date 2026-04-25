@@ -162,6 +162,7 @@ def calcula_pontos_full_house(lista_faces):
     
 def calcula_pontos_quadra(lista_faces):
     pontos = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
+    soma = 0
     for elemento in lista_faces:
         if elemento==1:
             pontos[1] += 1
@@ -178,27 +179,33 @@ def calcula_pontos_quadra(lista_faces):
     if pontos[1] == 4:
         for chave, numero in pontos.items():
             if numero == 1:
-                return pontos[1] + chave
+                soma += chave
+            return pontos[1] + soma
     elif pontos[2] == 4:
         for chave, numero in pontos.items():
             if numero == 1:
-                return pontos[2]*2 + chave
+                soma += chave
+        return pontos[2]*2 + soma
     elif pontos[3] == 4:
         for chave, numero in pontos.items():
             if numero == 1:
-                return pontos[3]*3 + chave
+                soma += chave
+        return pontos[3]*3 + soma
     elif pontos[4] == 4:
         for chave, numero in pontos.items():
             if numero == 1:
-                return pontos[4]*4 + chave
+                soma += chave
+        return pontos[4]*4 + soma
     elif pontos[5] == 4:
         for chave, numero in pontos.items():
             if numero == 1:
-                return pontos[5]*5 + chave
+                soma += chave
+        return pontos[5]*5 + soma
     elif pontos[6] == 4:
         for chave, numero in pontos.items():
             if numero == 1:
-                return pontos[6]*6 + chave
+                soma += chave
+        return pontos[6]*6 + soma
     else:
         return 0
 
