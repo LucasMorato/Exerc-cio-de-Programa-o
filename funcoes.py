@@ -161,7 +161,15 @@ def calcula_pontos_full_house(lista_faces):
         return 0
     
 def calcula_pontos_quadra(lista_faces):
+    tem_quadra = False
     for face in lista_faces:
         if lista_faces.count(face) >= 4:
-            return sum(lista_faces)
+            tem_quadra = True
+            break
+        if tem_quadra == True:
+            total = 0
+            for face in lista_faces:
+                total += face
+            return total
+    
     return 0
