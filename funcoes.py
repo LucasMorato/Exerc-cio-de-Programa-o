@@ -45,4 +45,11 @@ def calcula_pontos_regra_simples(lista_faces):
             pontos[6] += 6
     return pontos
 
+def calcula_pontos_soma(lista_faces):
+    pontos = 0
+    for elemento in lista_faces:
+        pontos += elemento
+    return pontos
+        
+    
         
