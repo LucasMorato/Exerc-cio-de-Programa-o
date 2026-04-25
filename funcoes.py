@@ -74,6 +74,28 @@ def calcula_pontos_sequencia_baixa(lista_faces):
         return 
     else:
         return 0
+
+def calcula_pontos_sequencia_alta(lista_faces):
+    pontos = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
+    for elemento in lista_faces:
+        if elemento==1:
+            pontos[1] += 1
+        elif elemento==2:
+            pontos[2] += 1
+        elif elemento==3:
+            pontos[3] += 1
+        elif elemento==4:
+            pontos[4] += 1
+        elif elemento==5:
+            pontos[5] += 1
+        elif elemento==6:
+            pontos[6] += 1
+    if pontos[1] >= 1 and pontos[2] >= 1 and pontos[3] >= 1 and pontos[4] >= 1 and pontos[5] >= 1:
+        return 20
+    elif pontos[2] >= 1 and pontos[3] >= 1 and pontos[4] >= 1 and pontos[5] >= 1 and pontos[6] >= 1:
+        return 20
+    else:
+        return 0
             
     
         
