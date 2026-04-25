@@ -71,7 +71,12 @@ def calcula_pontos_sequencia_baixa(lista_faces):
     elif pontos[2] >= 1 and pontos[3] >= 1 and pontos[4] >= 1 and pontos[5] >= 1:
         return 15
     elif pontos[3] >= 1 and pontos[4] >= 1 and pontos[5] >= 1 and pontos[6] >= 1:
-        return 15
-        
+        return 
+    else:
+        ponto = 0
+        for elemento in lista_faces:
+            ponto += elemento
+        return ponto
+            
     
         
