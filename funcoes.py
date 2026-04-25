@@ -166,10 +166,10 @@ def calcula_pontos_quadra(lista_faces):
         if lista_faces.count(face) >= 4:
             tem_quadra = True
             break
-        if tem_quadra:
-            total = 0
-            for face in lista_faces:
-                total += face
-            return total
+    if tem_quadra:
+        total = 0
+        for face in lista_faces:
+            total += face
+        return total
     
     return 0
