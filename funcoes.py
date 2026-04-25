@@ -113,49 +113,49 @@ def calcula_pontos_full_house(lista_faces):
         elif elemento==6:
             pontos[6] += 1
     if (pontos[1] == 3 and pontos[2] == 2) or (pontos[1] == 2 and pontos[2] == 3):
-        soma = pontos[1] + pontos[2]
+        soma = pontos[1] + pontos[2]*2
         return soma
     elif (pontos[1] == 3 and pontos[3] == 2) or (pontos[1] == 2 and pontos[3] == 3):
-        soma = pontos[1] + pontos[3]
+        soma = pontos[1] + pontos[3]*3
         return soma
     elif (pontos[1] == 3 and pontos[4] == 2) or (pontos[1] == 2 and pontos[4] == 3):
-        soma = pontos[1] + pontos[4]
+        soma = pontos[1] + pontos[4]*4
         return soma
     elif (pontos[1] == 3 and pontos[5] == 2) or (pontos[1] == 2 and pontos[5] == 3):
-        soma = pontos[1] + pontos[5]
+        soma = pontos[1] + pontos[5]*5
         return soma
     elif (pontos[1] == 3 and pontos[6] == 2) or (pontos[1] == 2 and pontos[6] == 3):
-        soma = pontos[1] + pontos[6]
+        soma = pontos[1] + pontos[6]*6
         return soma
     elif (pontos[2] == 3 and pontos[3] == 2) or (pontos[2] == 2 and pontos[3] == 3):
-        soma = pontos[2] + pontos[3]
+        soma = pontos[2]*2 + pontos[3]*3
         return soma
     elif (pontos[2] == 3 and pontos[4] == 2) or (pontos[2] == 2 and pontos[4] == 3):
-        soma = pontos[2] + pontos[4]
+        soma = pontos[2]*2 + pontos[4]*4
         return soma
     elif (pontos[2] == 3 and pontos[5] == 2) or (pontos[2] == 2 and pontos[5] == 3):
-        soma = pontos[2] + pontos[5]
+        soma = pontos[2]*2 + pontos[5]*5
         return soma
     elif (pontos[2] == 3 and pontos[6] == 2) or (pontos[2] == 2 and pontos[6] == 3):
-        soma = pontos[2] + pontos[6]
+        soma = pontos[2]*2 + pontos[6]*6
         return soma
     elif (pontos[3] == 3 and pontos[4] == 2) or (pontos[3] == 2 and pontos[4] == 3):
-        soma = pontos[3] + pontos[4]
+        soma = pontos[3]*3 + pontos[4]*4
         return soma
     elif (pontos[3] == 3 and pontos[5] == 2) or (pontos[3] == 2 and pontos[5] == 3):
-        soma = pontos[3] + pontos[5]
+        soma = pontos[3]*3 + pontos[5]*5
         return soma
     elif (pontos[3] == 3 and pontos[6] == 2) or (pontos[3] == 2 and pontos[6] == 3):
-        soma = pontos[3] + pontos[6]
+        soma = pontos[3]*3 + pontos[6]*6
         return soma
     elif (pontos[4] == 3 and pontos[5] == 2) or (pontos[4] == 2 and pontos[5] == 3):
-        soma = pontos[4] + pontos[5]
+        soma = pontos[4]*4 + pontos[5]*5
         return soma
     elif (pontos[4] == 3 and pontos[6] == 2) or (pontos[4] == 2 and pontos[6] == 3):
-        soma = pontos[4] + pontos[6]
+        soma = pontos[4]*4 + pontos[6]*6
         return soma
     elif (pontos[5] == 3 and pontos[6] == 2) or (pontos[5] == 2 and pontos[6] == 3):
-        soma = pontos[5] + pontos[6]
+        soma = pontos[5]*5 + pontos[6]*6
         return soma
     else:
         return 0
