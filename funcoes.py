@@ -28,3 +28,21 @@ def remover_dado(dados_rolados, dados_no_estoque, dado_para_remover):
     resultado.append(teste)
     return resultado
 
+def calcula_pontos_regra_simples(lista_faces):
+    pontos = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
+    for elemento in lista_faces:
+        if elemento==1:
+            pontos[1] += 1
+        elif elemento==2:
+            pontos[2] += 2
+        elif elemento==3:
+            pontos[3] += 3
+        elif elemento==4:
+            pontos[4] += 4
+        elif elemento==5:
+            pontos[5] += 5
+        elif elemento==6:
+            pontos[6] += 6
+    return pontos
+
+        
