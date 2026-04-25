@@ -178,32 +178,32 @@ def calcula_pontos_quadra(lista_faces):
             pontos[6] += 1
     if pontos[1] == 4:
         for chave, numero in pontos.items():
-            if numero == 1:
+            if numero < 4 and numero > 0:
                 soma += chave
             return pontos[1] + soma
     elif pontos[2] == 4:
         for chave, numero in pontos.items():
-            if numero == 1:
+            if numero < 4 and numero > 0:
                 soma += chave
         return pontos[2]*2 + soma
     elif pontos[3] == 4:
         for chave, numero in pontos.items():
-            if numero == 1:
+            if numero < 4 and numero > 0:
                 soma += chave
         return pontos[3]*3 + soma
     elif pontos[4] == 4:
         for chave, numero in pontos.items():
-            if numero == 1:
+            if numero < 4 and numero > 0:
                 soma += chave
         return pontos[4]*4 + soma
     elif pontos[5] == 4:
         for chave, numero in pontos.items():
-            if numero == 1:
+            if numero < 4 and numero > 0:
                 soma += chave
         return pontos[5]*5 + soma
     elif pontos[6] == 4:
         for chave, numero in pontos.items():
-            if numero == 1:
+            if numero < 4 and numero > 0:
                 soma += chave
         return pontos[6]*6 + soma
     else:
