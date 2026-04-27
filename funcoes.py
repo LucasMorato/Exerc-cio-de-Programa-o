@@ -198,3 +198,14 @@ def calcula_pontos_quina(lista_faces):
         return 50
     else:
         return 0
+
+def calcula_pontos_regra_avancada(lista_faces):
+    pontos = {}
+    pontos['cinco_iguais'] = calcula_pontos_quina(lista_faces)
+    pontos['full_house'] = calcula_pontos_full_house(lista_faces)
+    pontos['quadra'] = calcula_pontos_quadra(lista_faces)
+    pontos['sem_combinacao'] = calcula_pontos_soma(lista_faces)
+    pontos['sequencia_alta'] = calcula_pontos_sequencia_alta(lista_faces)
+    pontos['sequencia_baixa'] = calcula_pontos_sequencia_baixa(lista_faces)
+    return pontos
+ 
