@@ -26,9 +26,9 @@ while rodada < 12:
     
     while not terminou:
         if not opinvalida:
-        print("Dados rolados:", dados)
-        print("Dados guardados:", guardados)
-        print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
+            print("Dados rolados:", dados)
+            print("Dados guardados:", guardados)
+            print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
         op = input()
         
         if op == '1':
