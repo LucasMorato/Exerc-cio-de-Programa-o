@@ -28,17 +28,19 @@ while rodada < 12:
     while jogada_feita == False:
         print("Dados rolados:", dados)
         print("Dados guardados:", dados_guardados)
-
-        opcao = input("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
+        print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
+        opcao = input()
 
         if opcao == '1':
-            indice = int(input("Digite o índice do dado a ser guardado (0 a 4):"))
+            print("Digite o índice do dado a ser guardado (0 a 4):")
+            indice = int(input())
             resultado = guardar_dado(dados, dados_guardados, indice)
             dados = resultado[0]
             dados_guardados = resultado[1]
 
         elif opcao == '2':
-            indice = int(input("Digite o índice do dado a ser removido (0 a 4):"))
+            print("Digite o índice do dado a ser removido (0 a 4):")
+            indice = int(input())
             resultado = remover_dado(dados, dados_guardados, indice)
             dados = resultado[0]
             dados_guardados = resultado[1]
@@ -57,7 +59,8 @@ while rodada < 12:
             valido = False
 
             while valido == False:
-                categoria = input("Digite a combinação desejada:")
+                print("Digite a combinação desejada:")
+                categoria = input()
 
                 if categoria == 'sem_combinacao' or categoria == 'quadra' or categoria == 'full_house' or categoria == 'sequencia_baixa' or categoria == 'sequencia_alta' or categoria == 'cinco_iguais':
 
