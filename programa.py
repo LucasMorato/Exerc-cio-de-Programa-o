@@ -28,20 +28,17 @@ while rodada < 12:
     while jogada_feita == False:
         print("Dados rolados:", dados)
         print("Dados guardados:", dados_guardados)
-        print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
 
-        opcao = input()
+        opcao = input("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
 
         if opcao == '1':
-            print("Digite o índice do dado a ser guardado (0 a 4):")
-            indice = int(input())
+            indice = int(input("Digite o índice do dado a ser guardado (0 a 4):"))
             resultado = guardar_dado(dados, dados_guardados, indice)
             dados = resultado[0]
             dados_guardados = resultado[1]
 
         elif opcao == '2':
-            print("Digite o índice do dado a ser removido (0 a 4):")
-            indice = int(input())
+            indice = int(input("Digite o índice do dado a ser removido (0 a 4):"))
             resultado = remover_dado(dados, dados_guardados, indice)
             dados = resultado[0]
             dados_guardados = resultado[1]
@@ -60,11 +57,10 @@ while rodada < 12:
             valido = False
 
             while valido == False:
-                print("Digite a combinação desejada:")
-                categoria = input()
+                categoria = input("Digite a combinação desejada:")
 
                 if categoria == 'sem_combinacao' or categoria == 'quadra' or categoria == 'full_house' or categoria == 'sequencia_baixa' or categoria == 'sequencia_alta' or categoria == 'cinco_iguais':
-                    
+
                     if cartela['regra_avancada'][categoria] != -1:
                         print("Essa combinação já foi utilizada.")
                     else:
@@ -73,7 +69,7 @@ while rodada < 12:
                         jogada_feita = True
 
                 elif categoria == '1' or categoria == '2' or categoria == '3' or categoria == '4' or categoria == '5' or categoria == '6':
-                    
+
                     numero = int(categoria)
 
                     if cartela['regra_simples'][numero] != -1:
