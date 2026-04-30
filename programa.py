@@ -22,23 +22,26 @@ while rodada < 12:
     guardados = []
     rerrolagens = 0
     terminou = False
-
+    opinvalida=False
+    
     while not terminou:
-
+        if not opinvalida:
         print("Dados rolados:", dados)
         print("Dados guardados:", guardados)
         print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
         op = input()
-
+        
         if op == '1':
             print("Digite o índice do dado a ser guardado (0 a 4):")
             i = int(input())
             dados, guardados = guardar_dado(dados, guardados, i)
+            opinvalida=False
 
         elif op == '2':
             print("Digite o índice do dado a ser removido (0 a 4):")
             i = int(input())
             dados, guardados = remover_dado(dados, guardados, i)
+            opinvalida=False
 
         elif op == '3':
             if rerrolagens < 2:
@@ -46,10 +49,10 @@ while rodada < 12:
                 rerrolagens += 1
             else:
                 print("Você já usou todas as rerrolagens.")
-
+            opinvalida=False
         elif op == '4':
             imprime_cartela(cartela)
-
+            opinvalida=False
         elif op == '0':
             while True:
                 print("Digite a combinação desejada:")
@@ -76,7 +79,7 @@ while rodada < 12:
 
         else:
             print("Opção inválida. Tente novamente.")
-
+            opinvalida=True
     rodada += 1
 
 imprime_cartela(cartela)
