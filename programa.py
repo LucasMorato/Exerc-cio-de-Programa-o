@@ -54,8 +54,8 @@ while rodada < 12:
             imprime_cartela(cartela)
             opinvalida=False
         elif op == '0':
+            print("Digite a combinação desejada:")
             while True:
-                print("Digite a combinação desejada:")
                 c = input()
 
                 if c in cartela['regra_avancada']:
