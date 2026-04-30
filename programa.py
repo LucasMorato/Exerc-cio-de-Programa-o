@@ -37,6 +37,7 @@ while rodada < 12:
             resultado = guardar_dado(dados, dados_guardados, indice)
             dados = resultado[0]
             dados_guardados = resultado[1]
+            continue
 
         elif opcao == '2':
             print("Digite o índice do dado a ser removido (0 a 4):")
@@ -44,16 +45,19 @@ while rodada < 12:
             resultado = remover_dado(dados, dados_guardados, indice)
             dados = resultado[0]
             dados_guardados = resultado[1]
+            continue
 
         elif opcao == '3':
             if rerrolagens < 2:
-                dados = rolar_dados(5 - len(dados_guardados))
+                dados = rolar_dados(len(dados))
                 rerrolagens = rerrolagens + 1
             else:
                 print("Você já usou todas as rerrolagens.")
+            continue
 
         elif opcao == '4':
             imprime_cartela(cartela)
+            continue
 
         elif opcao == '0':
             valido = False
@@ -85,8 +89,11 @@ while rodada < 12:
                 else:
                     print("Combinação inválida. Tente novamente.")
 
+            continue
+
         else:
             print("Opção inválida. Tente novamente.")
+            continue
 
     rodada = rodada + 1
 
