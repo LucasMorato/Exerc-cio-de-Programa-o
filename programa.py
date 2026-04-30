@@ -15,6 +15,8 @@ cartela = {
     }
 }
 
+imprime_cartela(cartela)
+
 rodada = 0
 
 while rodada < 12:
